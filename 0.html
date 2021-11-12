@@ -1,0 +1,59 @@
+<script>
+	console.log("Hello World");
+
+	function nextInLine(arr, item)
+	{
+		arr.push(6);
+		return arr.shift();
+	}
+
+	var testArr = [1, 2, 3, 4, 5];
+	console.log("B: " + JSON.stringify(testArr));
+	console.log(nextInLine(testArr, 6));
+	console.log("A: " + JSON.stringify(testArr));
+</script>
+
+<script>
+	function  ourTrueOrFalse(isItTrue)
+	{
+		if (isItTrue)
+			return "Yes";
+		return "No";
+	}
+	console.log(ourTrueOrFalse(true));		//yes
+	console.log(ourTrueOrFalse(false));		//no
+	console.log(ourTrueOrFalse(0));			//no
+	console.log(ourTrueOrFalse(1));			//yes
+	console.log(ourTrueOrFalse(""));		//no
+	console.log(ourTrueOrFalse("word"));	//yes
+	console.log(ourTrueOrFalse([ ]));		//yes
+	console.log(ourTrueOrFalse([1, 2, 3]));	//no
+
+	function	isEqual(a , b)
+	{
+		if (a === b){
+			return "truely equal";
+		}else if (a == b) {
+			return "somewhat equal";
+		}else {
+			return "not equal";
+		}
+	}
+	function	isNotEqual(a , b)
+	{
+		if (a != b){
+			return "truely not equal";
+		}else if (a !== b) {
+			return "somewhat not equal";
+		}else {
+			return "equal";
+		}
+	}
+	console.log("a = 10, b = '10' " + isEqual(10, '10'));
+	console.log("a = 10, b = 10 " + isEqual(10, 10));
+	console.log("a = 10, b = 23 " + isEqual(10, 23));
+
+	console.log("a = 10, b = '10' " + isNotEqual(10, '10'));
+	console.log("a = 10, b = 10 " + isNotEqual(10, 10));
+	console.log("a = 10, b = 23 " + isNotEqual(10, 23));
+</script>
